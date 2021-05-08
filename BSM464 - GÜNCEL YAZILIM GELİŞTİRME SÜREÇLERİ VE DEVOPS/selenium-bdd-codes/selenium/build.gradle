@@ -1,0 +1,21 @@
+group 'com.sakarya.selenium'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'io.github.bonigarcia:webdrivermanager:2.2.1'
+    testCompile 'org.seleniumhq.selenium:selenium-java:3.7.1'
+    testCompile 'org.testng:testng:6.13.1'
+}
+
+test {
+    outputs.upToDateWhen { false }
+    useTestNG()
+}

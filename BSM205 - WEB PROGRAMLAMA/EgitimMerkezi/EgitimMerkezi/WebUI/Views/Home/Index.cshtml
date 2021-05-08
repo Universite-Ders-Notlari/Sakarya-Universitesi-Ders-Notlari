@@ -1,0 +1,156 @@
+﻿@{
+    ViewBag.Title = "Ana Sayfa";
+}
+
+@model WebUI.Controllers.AnaSayfaDTO
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-body">              
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <!-- En Son eklenen Slide getiriyoruz -->
+                            @foreach (var item in Model.slider)
+                            {
+                                <div id="slider" class="item" data-id="@item.ID">
+                                    @if (item.SliderFoto == null)
+                                    {
+                                        <img src="~/Content/images/resimyok.png" alt="@item.SliderText" />
+                                    }
+                                    else
+                                    {
+                                        <img style="height:292px;" src="data:image/png;base64,@System.Convert.ToBase64String(item.SliderFoto)" alt="@item.SliderText">
+                                    }
+                                    <div class="carousel-caption">
+                                        <h3>@item.SliderText</h3>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">SABİS HAKKINDA</div>
+            <div class="panel-body">
+                <p>
+                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                    enables a clean separation of concerns and gives you full control over markup
+                    for enjoyable, agile development.ASP.NET MVC gives you a powerful
+                    ASP.NET MVC gives you a powerfu
+                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that enables a clean separation of concerns and gives you full control over markup for enjoyable, agile development.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Duyurular</div>
+            <div class="panel-body">
+                <!-- En Son eklenen duyuru getiriyoruz -->
+                @foreach (var item in Model.duyuru)
+                {
+                    <div class="blog-list-post clearfix">
+                        <div class="blog-list-thumb">
+                            @if (item.DuyuruFoto == null)
+                            {
+                                <a><img class="img-responsive" src="~/Content/images/resimyok.png" alt="@item.DuyuruBaslik" /></a>
+                            }
+                            else
+                            {
+                                <a><img class="img-responsive" src="data:image/png;base64,@System.Convert.ToBase64String(item.DuyuruFoto)" alt="@item.DuyuruBaslik"></a>
+                            }
+                        </div>
+                        <div class="blog-list-details">
+                            <h5 class="blog-list-title"><a href="#">@item.DuyuruBaslik</a></h5>
+                            <p class="blog-list-meta small-text"><span><a>@String.Format("{0:dd/MM/yyyy}", item.DuyuruTarih)</a></span></p>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="panel-footer text-center">
+                <button type="button" class="btn btn-primary">Tüm Duyurular</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Referanslar</div>
+            <div class="panel-body">
+                <!-- En Son eklenen referans getiriyoruz -->
+                @foreach (var item in Model.referans)
+                {
+                    <div class="blog-list-post clearfix">
+                        <div class="blog-list-thumb">
+                            @if (item.ReferansFoto == null)
+                            {
+                                <a><img class="img-responsive" src="~/Content/images/resimyok.png" alt="@item.ReferansBaslik" /></a>
+                            }
+                            else
+                            {
+                                <a><img class="img-responsive" src="data:image/png;base64,@System.Convert.ToBase64String(item.ReferansFoto)" alt="@item.ReferansBaslik"></a>
+                            }
+                        </div>
+                        <div class="blog-list-details">
+                            <h5 class="blog-list-title"><a href="#">@item.ReferansBaslik</a></h5>
+                            <p class="blog-list-meta small-text"><span><a>@String.Format("{0:dd/MM/yyyy}", item.ReferansTarih)</a></span></p>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="panel-footer text-center">
+                <button type="button" class="btn btn-primary">Tüm Referanslar</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Blog</div>
+            <div class="panel-body">
+                <!-- En Son eklenen blog getiriyoruz -->
+                @foreach (var item in Model.blog)
+                {
+                    <div class="blog-list-post clearfix">
+                        <div class="blog-list-thumb">
+                            @if (item.BlogFoto == null)
+                            {
+                                <a><img class="img-responsive" src="~/Content/images/resimyok.png" alt="@item.BlogBaslik" /></a>
+                            }
+                            else
+                            {
+                                <a><img class="img-responsive" src="data:image/png;base64,@System.Convert.ToBase64String(item.BlogFoto)" alt="@item.BlogBaslik"></a>
+                            }
+                        </div>
+                        <div class="blog-list-details">
+                            <h5 class="blog-list-title"><a href="/Home/Blog">@item.BlogBaslik</a></h5>
+                            <p class="blog-list-meta small-text"><span><a>@String.Format("{0:dd/MM/yyyy}", item.BlogTarih)</a></span></p>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="panel-footer text-center">
+                <button type="button" class="btn btn-primary">Blog</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slider ilk yüklenirken active class eklemek için -->
+<script type="text/javascript">
+            $("#slider.item:first").addClass("item active");
+</script>

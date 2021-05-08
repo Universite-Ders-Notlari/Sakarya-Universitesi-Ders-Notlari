@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Blog";
+}
+
+@model  List<WebUI.Models.Data.Blog>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                @foreach (var item in Model.Take(1))
+                {
+                    <div class="panel-heading">
+                        <h4>@item.BlogBaslik</h4>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Ümit Kocabıçak</h4>
+                        <p>@String.Format("{0:dd/MM/yyyy}", item.BlogTarih)</p>
+                        @if (item.BlogFoto == null)
+                        {
+                            <img class="img-responsive" src="~/Content/images/resimyok.png" alt="@item.BlogBaslik" />
+                        }
+                        else
+                        {
+                            <img class="img-responsive" src="data:image/png;base64,@System.Convert.ToBase64String(item.BlogFoto)" alt="@item.BlogBaslik">
+                        }
+                        <p>@item.BlogIcerik</p>
+                        <hr />
+                        <a class="btn btn-primary">< Önceki</a>
+                        <a class="btn btn-primary pull-right">Sonraki ></a>
+                    </div>
+                }
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Blog Kategorileri</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                            enables a clean separation of concerns and gives you full control over markup
+                            for enjoyable, agile development.ASP.NET MVC gives you a powerful
+                            ASP.NET MVC gives you a powerfu
+                            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that enables a clean separation of concerns and gives you full control over markup for enjoyable, agile development.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">En Popüler 5 Blog</div>
+                    <div class="panel-body">
+                        @foreach (var item in Model.Take(5))
+                        {
+                            <div class="blog-list-post clearfix">
+                                <div class="blog-list-thumb">
+                                    @if (item.BlogFoto == null)
+                                    {
+                                        <img class="img-responsive" src="~/Content/images/resimyok.png" alt="@item.BlogBaslik" />
+                                    }
+                                    else
+                                    {
+                                        <img class="img-responsive" src="data:image/png;base64,@System.Convert.ToBase64String(item.BlogFoto)" alt="@item.BlogBaslik">
+                                    }
+                                </div>
+                                <div class="blog-list-details">
+                                    <h5><a>@item.BlogBaslik</a></h5>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    @*<div class="panel-footer">
+                        <button type="button" class="btn btn-primary">Tümü</button>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

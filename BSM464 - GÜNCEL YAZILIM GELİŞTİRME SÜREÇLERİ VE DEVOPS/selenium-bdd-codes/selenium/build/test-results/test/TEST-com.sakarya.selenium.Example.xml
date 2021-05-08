@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.sakarya.selenium.Example" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-02-27T19:46:44" hostname="mehmet-mbp" time="6.572">
+  <properties/>
+  <testcase name="exampleTest" classname="com.sakarya.selenium.Example" time="6.572"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

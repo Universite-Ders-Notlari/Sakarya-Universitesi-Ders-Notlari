@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Modüller";
+}
+
+@model  List<WebUI.Models.Data.Modul>
+
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>Modüller</h4>
+        </div>
+        <div class="panel-body">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                @if (item.ModulFoto == null)
+                                {
+                                    <img class="img-responsive" src="~/Content/images/resimyok.png" alt="@item.ModulBaslik" />
+                                }
+                                else
+                                {
+                                    <img class="img-responsive" src="data:image/png;base64,@System.Convert.ToBase64String(item.ModulFoto)" alt="@item.ModulBaslik" />
+                                }
+                            </div>
+                            <div class="col-md-12">
+                                <h4>@item.ModulBaslik</h4>
+                                <p>@item.ModulIcerik</p>
+                                <a href="/Home/ModuleDetails?ModulID=@item.ID" class="btn btn-primary">Detaylar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="feature.CucumberTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="mehmet-mbp" time="0.0">
+  <properties/>
+  <system-out><![CDATA[
+?[31mFailed scenarios:?[0m
+?[31mfeature/exampleTest.feature:2 ?[0m# Scenario: Example Test
+
+1 Scenarios (?[31m1 failed?[0m)
+3 Steps (?[31m1 failed?[0m, ?[32m2 passed?[0m)
+0m6.615s
+
+java.lang.AssertionError: expected:<0> but was:<1>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at feature.CucumberSteps.seeGoogleLogo(CucumberSteps.java:44)
+	at ✽.And I see Google Logo(feature/exampleTest.feature:5)
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

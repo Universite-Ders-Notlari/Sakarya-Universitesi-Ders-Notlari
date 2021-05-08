@@ -1,0 +1,12 @@
+﻿  stdafx.cpp
+  Kuyruk.cpp
+g:\dersler\veriyapıları\20152016\hafta8\kuyruk\kuyruk\baglikuyruk.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  g:\dersler\veriyapıları\20152016\hafta8\kuyruk\kuyruk\baglikuyruk.h(62): note: see reference to class template instantiation 'bagliKuyruk<T>' being compiled
+g:\dersler\veriyapıları\20152016\hafta8\kuyruk\kuyruk\baglikuyruk.h(24): warning C4183: 'bagliYigin': missing return type; assumed to be a member function returning 'int'
+g:\dersler\veriyapıları\20152016\hafta8\kuyruk\kuyruk\kuyruk.cpp(45): error C2059: syntax error: 'catch'
+g:\dersler\veriyapıları\20152016\hafta8\kuyruk\kuyruk\kuyruk.cpp(46): error C2143: syntax error: missing ';' before '{'
+g:\dersler\veriyapıları\20152016\hafta8\kuyruk\kuyruk\kuyruk.cpp(47): error C2065: 'h': undeclared identifier
+g:\dersler\veriyapıları\20152016\hafta8\kuyruk\kuyruk\kuyruk.cpp(47): error C2228: left of '.Mesaj' must have class/struct/union
+  g:\dersler\veriyapıları\20152016\hafta8\kuyruk\kuyruk\kuyruk.cpp(47): note: type is 'unknown-type'
+g:\dersler\veriyapıları\20152016\hafta8\kuyruk\kuyruk\kuyruk.cpp(25): error C2317: 'try' block starting on line '25' has no catch handlers
+g:\dersler\veriyapıları\20152016\hafta8\kuyruk\kuyruk\kuyruk.cpp(7): fatal error C1075: the left brace '{' was unmatched at the end of the file

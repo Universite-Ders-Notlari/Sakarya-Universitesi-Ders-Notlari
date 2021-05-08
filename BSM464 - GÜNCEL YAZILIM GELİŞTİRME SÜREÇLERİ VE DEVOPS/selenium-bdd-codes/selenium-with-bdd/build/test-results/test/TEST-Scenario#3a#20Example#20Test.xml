@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: Example Test" tests="4" skipped="0" failures="2" errors="0" timestamp="2019-02-27T20:09:43" hostname="mehmet-mbp" time="1.555">
+  <properties/>
+  <testcase name="Given I open browser" classname="Scenario: Example Test" time="0.001"/>
+  <testcase name="When I navigate to test site" classname="Scenario: Example Test" time="0.0"/>
+  <testcase name="And I see Google Logo" classname="Scenario: Example Test" time="0.002">
+    <failure message="java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;1&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;1&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at feature.CucumberSteps.seeGoogleLogo(CucumberSteps.java:44)
+	at ✽.And I see Google Logo(feature/exampleTest.feature:5)
+</failure>
+  </testcase>
+  <testcase name="classMethod" classname="Scenario: Example Test" time="6.657">
+    <failure message="java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;1&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;1&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at feature.CucumberSteps.seeGoogleLogo(CucumberSteps.java:44)
+	at ✽.And I see Google Logo(feature/exampleTest.feature:5)
+</failure>
+  </testcase>
+  <system-out><![CDATA[23:09:39.427 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+23:09:40.066 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Latest version of chromedriver is 73.0.3683.20
+23:09:40.068 [Test worker] INFO io.github.bonigarcia.wdm.Downloader - Downloading https://chromedriver.storage.googleapis.com/73.0.3683.20/chromedriver_mac64.zip
+23:09:41.821 [Test worker] INFO io.github.bonigarcia.wdm.Downloader - Extracting binary from compressed file chromedriver_mac64.zip
+23:09:41.992 [Test worker] INFO io.github.bonigarcia.wdm.Downloader - Overriding former binary /Users/musanmaz/.m2/repository/webdriver/chromedriver/mac64/73.0.3683.20/chromedriver
+23:09:42.000 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/musanmaz/.m2/repository/webdriver/chromedriver/mac64/73.0.3683.20/chromedriver
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017) on port 16061
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+Feb 27, 2019 11:09:43 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+</testsuite>
