@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="tr.edu.sakarya.nevzattasbasi.hafta5.otelbi.Anasayfa">
+    <item
+        android:id="@+id/giris"
+        android:orderInCategory="100"
+        android:title="Giriş Sayfası"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/sonsyf"
+        android:orderInCategory="100"
+        android:title="Son Sayfa"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/cikis"
+        android:orderInCategory="100"
+        android:title="@string/cikis"
+        app:showAsAction="never" />
+</menu>

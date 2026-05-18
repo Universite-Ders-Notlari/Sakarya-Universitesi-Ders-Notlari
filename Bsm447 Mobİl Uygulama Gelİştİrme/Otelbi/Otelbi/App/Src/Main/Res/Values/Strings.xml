@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Otel Rezervasyonu</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_devam2">Oda Türü Seçimi</string>
+    <string name="odts">Oda Tür Seçimi</string>
+    <string name="cikis">Çıkış</string>
+    <string name="title_activity_son_sayfa">SonSayfa</string>
+
+</resources>

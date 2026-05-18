@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+
+<html>
+<head>
+<meta charset="UTF-8"> 
+<title>ilk sayfamız</title>
+<script src="kodlar.js">
+</script>
+</head>
+<body>
+<form action="kayit.php" method="get" id="form">
+Metin:<input type="text" name="metin" id="isim" onkeyup="kontrol2();"><br>
+<div id="sonuc" style="background-color:black;color:white;width:30px">Sonuç:</div>
+<div id="uyari">Uyarı:</div>
+<input type="submit" value="Hesapla" onclick="return Kontrol();">
+<input type="button" value="Gönder" onclick="gonder();">
+</form>
+Boy:<input type="text" name="boy" id="boy"><br>
+Yaş:<input type="text" name="yas" id="yas"><br>
+Kilo:<input type="text" name="kilo" id="kilo"><br>
+Cinsiyet:<select id="cinsiyet" name="cinsiyet">
+			<option value="erkek">Erkek</option>
+			<option value="kadin">Kadın</option>
+		</select><br>
+<div id="ikilo">Sonuç:</div>
+<input type="button" value="Hesapla" onclick="kiloHesabi();">
+
+</body>
+</html>

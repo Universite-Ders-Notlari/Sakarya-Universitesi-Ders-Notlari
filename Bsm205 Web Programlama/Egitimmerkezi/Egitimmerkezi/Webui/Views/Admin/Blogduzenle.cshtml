@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Blog Duzenle";
+}
+
+@model WebUI.Models.Data.Blog
+
+<div class="row">
+    <div class="col-sm-12">
+        @using (Html.BeginForm("BlogDuzenle", "Admin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            @Html.HiddenFor(m => m.ID)
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>Blog Düzenle</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label class="col-sm-2 control-label"></label>
+                                <div class="col-sm-10">
+                                    @if (Model.BlogFoto == null)
+                                    {
+                                        <img style='width:100%; height:auto; border:solid 1px #cccccc;' src="~/Content/images/resimyok.png" alt="" />
+                                    }
+                                    else
+                                    {
+                                        <img style='width:50%; height:auto; border:solid 1px #cccccc;' src="data:image/png;base64,@System.Convert.ToBase64String(Model.BlogFoto)" alt="" />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label class="col-sm-2 control-label">Fotoğraf</label>
+                                <div class="col-sm-10">
+                                    <input type="file" name="file" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label class="col-sm-2 control-label">Başlık</label>
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(m => m.BlogBaslik, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label class="col-sm-2 control-label">İçerik</label>
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(m => m.BlogIcerik, new { @class = "form-control", rows = 6, columns = 40 })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <div class="btn-toolbar pull-right">
+                                <input type="submit" value="Güncelle" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

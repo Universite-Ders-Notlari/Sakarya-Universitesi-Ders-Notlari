@@ -1,0 +1,212 @@
+/* Header */
+.foto {
+	
+	width : 50 px;
+	height:50px;
+	
+}
+.padTop20
+{
+	padding-top:20px;
+	
+}
+
+.pad10
+{
+	
+	padding:10px;
+}
+
+
+.pad15
+{
+	
+	padding:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mar0 {
+	
+	margin-bottom: 0px;
+}
+.pad0 {
+	padding :0px;
+	padding-right:5px;
+}
+.padx
+{
+		padding-left:300px;
+}
+
+
+.pull-left {
+    float: left !important;
+}
+
+
+.nav-yuk70{
+	
+	height:65px;
+	
+	
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+/*	max-height:400px */
+}
+
+.fill2 {
+   height:400px;
+/*	max-height:400px */
+}
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+/* öğrenci görüşleri */
+
+.widgwt-main {
+  margin-top: 30px;
+}
+
+.widget-title {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.widget-main-title {
+  border-bottom: 1px solid;
+}
+
+.prof-thumb {
+  float: left;
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  overflow: hidden;
+}
+.prof-thumb img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* Etkinlikler */
+.panel.date {
+    margin: 0px;
+    width: 60px;
+    text-align: center;
+}
+
+.panel.date .month {
+    padding: 2px 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.panel.date .day {
+    padding: 3px 0px;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.duyuru-resim {
+  
+  width: 70px;
+  height: 70px;
+ 
+}
+
+.logo-yani-yazisi {
+
+   float: left !important;
+    font-size: 18px;
+    font-weight: 100;
+    padding-top: 5px;
+    padding-left: 5px;
+	padding-right:50px;
+    margin-top: 6px;
+	
+  
+}
+
+
+/*=========================
+  social media
+ ================= */
+
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+/* footer social icons */
+
+.social-network a.icoFacebook {
+	background-color:#3B5998;
+}
+.social-network a.icoTwitter {
+	background-color:#33ccff;
+}
+.social-network a.icoGoogle {
+	background-color:#BD3518;
+}
+
+.social-network a.icoLinkedin {
+	background-color:#007bb7;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 30px;
+	height: 30px;
+	font-size:15px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:30px;
+	text-align: center;
+}
+
+.social-circle i {
+	color: #fff;
+
+}
+
+ul.social-network li a {
+ background-color: #D3D3D3;   
+} 

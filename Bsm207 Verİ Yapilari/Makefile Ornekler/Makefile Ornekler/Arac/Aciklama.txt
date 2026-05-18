@@ -1,0 +1,3 @@
+
+C:\> g++ -c Arac.cpp
+C:\> g++ -o Test Arac.o Test.cpp

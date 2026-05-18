@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Slider";
+}
+
+@model List<WebUI.Models.Data.Slider>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>Admin Menü</h4>
+                </div>
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                        <li class="active">@Html.ActionLink("Slide", "Slider", "Admin")</li>
+                        <li>@Html.ActionLink("Personel", "Personel", "Admin")</li>
+                        <li>@Html.ActionLink("Modüller", "Moduller", "Admin")</li>
+                        <li>@Html.ActionLink("Blog", "Blog", "Admin")</li>
+                        <li>@Html.ActionLink("Duyurular", "Duyurular", "Admin")</li>
+                        <li>@Html.ActionLink("Referanslar", "Referanslar", "Admin")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>Slider</h4>
+                    <a href="/Admin/SlideEkle" class="btn btn-success btn-sm tooltips pull-right" title="Yeni Slide" style="margin-top:-33px;">Yeni Slide</a>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th class="col-md-1">Fotoğraf</th>
+                                <th class="col-md-7">Başlık</th>
+                                <th class="col-md-2">Başlangıç Tarihi</th>
+                                <th class="col-md-2">Bitiş Tarihi</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    @if (item.SliderFoto == null)
+                                    {
+                                        <td><img style='width:100%; height:auto; border:solid 1px #cccccc;' src="~/Content/images/resimyok.png" alt="" /></td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            <img style='width:100%; height:auto; border:solid 1px #cccccc;' src="data:image/png;base64,@System.Convert.ToBase64String(item.SliderFoto)" />
+                                        </td>
+                                    }
+                                    <td>@item.SliderText</td>
+                                    <td>@String.Format("{0:d}", @item.BaslangicTarih)</td>
+                                    <td>@String.Format("{0:d}", @item.BitisTarih)</td>
+                                    <td><a href='/Admin/SlideDuzenle?SlideID=@item.ID' class='btn btn-xs btn-info tooltips' title='Düzenle'>Düzenle</a></td>
+                                    <td>@Html.ActionLink("Sil", "/SlideSil", new { SlideID = item.ID }, new { @class = "btn btn-xs btn-danger tooltips", onclick = "return confirm('Silmek İstediğinize Emin Misinizin ?');" })</td>
+                                    @*<td><a href="/Admin/SlideSil?SlideID=@item.ID" class='btn btn-xs btn-danger tooltips' title='Sil'>Sil</a></td>*@
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+

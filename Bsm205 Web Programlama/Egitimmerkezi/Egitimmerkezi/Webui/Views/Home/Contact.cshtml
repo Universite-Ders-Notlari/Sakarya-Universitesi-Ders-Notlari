@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Harita</h4>
+            </div>
+            <div class="panel-body">
+                <div class="contact-map">
+                    <div class="google-map-canvas" id="map-canvas" style="height: 500px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>İletişim</h4>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <address>
+                        Sakarya Üniversitesi Rektörlüğü<br />
+                        54187 Esentepe / SAKARYA<br />
+                        Tel: +90 (264) 295 54 54
+                        E-mail: umit@sakarya.edu.tr
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>İletişim Formu</h4>
+            </div>
+            <div class="panel-body">
+                <div col-md-12>
+                    <div class="contact-form">
+                        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Adınız Soyadınız *</label>
+                                <input id="adsoyad" type="text" name="name" class="form-control" placeholder="Adınız Soyadınız *">
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Eposta Adresiniz *</label>
+                                <input id="eposta" type="text" name="name" class="form-control" placeholder="Eposta Adresiniz *">
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Mesajınız *</label>
+                                @Html.TextArea("Mesaj", null, new { @class = "form-control", placeholder = "Mesajınız", rows = 6, columns = 40 })
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="col-sm-offset-4 btn btn-primary">Gönder</button>
+                                <label>@TempData["Mesaj"]</label>
+                            </div>
+                        }                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function initialize() {
+
+        var myLatlng = new google.maps.LatLng(40.741223, 30.332890);
+        var mapOptions = {
+            zoom: 15,
+            center: myLatlng
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            animation: google.maps.Animation.DROP
+        });
+    }
+
+    function loadScript() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+            'callback=initialize';
+        document.body.appendChild(script);
+    }
+
+    window.onload = loadScript;
+</script>

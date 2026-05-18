@@ -1,0 +1,99 @@
+body{
+	background-color:#D9F7D1;
+	font-family:Cambria;
+	font-size:14px;
+	color:#48098C;
+	text-align:left;
+}
+.arkaplan
+{
+	background-color:#F0CECF;
+	font-family:Cambria;
+	font-size:12px;
+	color:#790AF3;
+	text-align:center;
+	width:20%;
+	height:50px;
+}
+.resimArkaplan
+{
+	background-image:url(arkaplan.png);
+	font-family:Cambria;
+	font-size:10px;
+	color:#600305;
+	text-align:right;
+	width:15%;
+	height:40px;
+}
+div{
+	font-family:"Gill Sans", "Gill Sans MT", Helvetica, Arial, sans-serif;
+	font-size:12px;
+}
+div.t{
+	background-color:#4F3977;
+	color:#ECDEDE;
+}
+div.c{
+	background-color:#C4A9A9;
+	color:#410506;
+}
+span{
+	background-color:#4F3977;
+	color:#ECDEDE;
+	font-family:"Gill Sans", "Gill Sans MT", Helvetica, Arial, sans-serif;
+	font-size:12px;
+}
+.bolumler{
+	font-family:"Gill Sans", Helvetica, Arial, sans-serif;
+	font-size:12px;
+	background-color:#C4A9A9;
+	color:#410506;
+	width:15%;
+	float:left;
+}
+.dersler{
+	font-family:"Gill Sans", Helvetica, Arial, sans-serif;
+	font-size:10px;
+	background-color:#4F3977;
+	color:#ECDEDE;
+	width:20%;
+	float:left;
+}
+
+.bolumleri{
+	font-family:"Gill Sans", Helvetica, Arial, sans-serif;
+	font-size:12px;
+	background-color:#C4A9A9;
+	color:#410506;
+	width:40%;
+	float:left;
+}
+.dersleri{
+	font-family:"Gill Sans", Helvetica, Arial, sans-serif;
+	font-size:10px;
+	background-color:#4F3977;
+	color:#ECDEDE;
+	width:60%;
+	float:left;
+}
+.universite
+{
+	font-family:"Gill Sans", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	background-color:#7961A4;
+	color:#410506;
+	width:100%;
+	text-align:center;
+}
+.bolum
+{
+	font-family:"Gill Sans", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	background-color:#D2EBE7;
+	color:#410506;
+	width:100%;
+	text-align:center;
+}
+.sifirla{
+	clear:both;
+}
